@@ -23,10 +23,10 @@ const Detail = () => {
         <table>
           <thead>
             <tr>
-              <th>Nombre</th>
+              <th>Name</th>
               <th>Email</th>
-              <th>Telefono</th>
-              <th>Sitio Web</th>
+              <th>Phone</th>
+              <th>Website</th>
             </tr>
           </thead>
           <tbody>

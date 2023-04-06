@@ -8,7 +8,7 @@ const Favs = () => {
 
   return (
     <div className={theme.color}>
-      <h1 className="favDent">Dentista Favorito</h1>
+      <h1>Dentists Favs</h1>
       <div className="card-grid">
         {favs.length ? (
           favs.map((fav) => (
@@ -20,7 +20,7 @@ const Favs = () => {
             />
           ))
         ) : (
-          <p className="favorit">No hay favoritos</p>
+          <p>No hay favoritos</p>
         )}
       </div>
     </div>
