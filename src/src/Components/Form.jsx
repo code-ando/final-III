@@ -54,18 +54,25 @@ const Form = () => {
   return (
     <div>
       <form>
+        
         <input
           className={errors.nombreError ? "inputError" : ""}
           name="nombre"
           type="text"
           onChange={handleInputChange}
+          placeholder="Nombre"
+          
         />
+        
+        
+        
         {errors.nombreError && <label> ⚠ {errors.nombreError}</label>}
         <input
           className={errors.emailError ? "inputError" : ""}
           name="email"
           type="email"
           onChange={handleInputChange}
+          placeholder="Email"
         />
         {errors.emailError && <label> ⚠ {errors.emailError}</label>}
         <button onClick={handleSubmit}>Enviar</button>
