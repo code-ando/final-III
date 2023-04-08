@@ -18,28 +18,28 @@ const Detail = () => {
 
   return (
     <div className={theme.color}>
-      <h1>Detail Dentist id </h1>
+      <h1>Detalle del Dr </h1>
+      <div className="conte">
+      <img
+          className="card-img-top"
+          src="/images/doctora.jpg"
+          alt="doctor placeholder"
+          />
       {odontologo && (
-        <table>
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Email</th>
-              <th>Telefono</th>
-              <th>Sitio Web</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{odontologo.name}</td>
-              <td>{odontologo.email}</td>
-              <td>{odontologo.phone}</td>
-              <td>{odontologo.website}</td>
-            </tr>
-          </tbody>
-        </table>
+        
+        <ul className="list">
+            <li>Name: {odontologo.name}</li>
+            <li>Email: {odontologo.email}</li>
+            <li>Telefono: {odontologo.phone}</li>
+            <li>Sitio Web: {odontologo.website}</li>
+          </ul>
+            
+             
+          
+        
       )}
       {!odontologo && <h1>Dentist Not Found</h1>}
+    </div>
     </div>
   );
 };

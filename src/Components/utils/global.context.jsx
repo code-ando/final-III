@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer, useState } from "react";
 
-const initialThemeState = { color: "light"};
+const initialThemeState = { color: "light" };
 const initialOdontologosState = [];
 
 const EstadosGlobales = createContext();
@@ -15,25 +15,23 @@ const themeReducer = (state, action) => {
       return state;
   }
 };
-
-
 const EstadosGlobalesProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
-   const [odontologos, setOdontologos] = useState(initialOdontologosState);
-   const [theme, dispatchTheme] = useReducer(themeReducer, initialThemeState);
+  const [odontologos, setOdontologos] = useState(initialOdontologosState);
+  const [theme, dispatchTheme] = useReducer(themeReducer, initialThemeState);
 
-   const value = {
-     odontologos,
-     setOdontologos,
-     theme,
-     dispatchTheme,
-   };
+  const value = {
+    odontologos,
+    setOdontologos,
+    theme,
+    dispatchTheme,
+  };
 
   return (
-    <EstadosGlobales.Provider value={{value}}>
+    <EstadosGlobales.Provider value={value}>
       {children}
     </EstadosGlobales.Provider>
   );
 };
+
 export default EstadosGlobalesProvider;
 export const useEstadosGlobalesContext = () => useContext(EstadosGlobales);
